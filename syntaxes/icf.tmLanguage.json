@@ -1,0 +1,83 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "IAR Linker Configuration File",
+	"scopeName": "source.icf",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#my-patterns"
+		},
+		{
+			"include": "#support"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.icf",
+				"match": "\\b(if|else|include)\\b"
+			}, {
+				"name": "keyword.other.operator.icf",
+				"match": "\\b(in|at|from|to|with|by copy|manually)\\b"
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.icf",
+				"begin": "//",
+				"end": "$"
+			}, {
+				"name": "comment.block.documentation.icf",
+				"begin": "/\\*",
+				"end": "\\*/"
+			}]
+		},
+		"support": {
+			"patterns": [{
+				"name": "support.function.icf",
+				"match": "\\b(define|place|initialize|do not initialize|export)\\b"
+			}]
+		},
+		"my-patterns": {
+			"patterns": [
+			{
+				"name": "storage.modifier.icf",
+				"match": "\\b(readonly|ro|readwrite|rw|zeroinit|zi)\\b"
+			}, {
+				"name": "support.type.icf",
+				"match": "\\b(symbol|memory|region|block|section|object|address)\\b"
+			}, {
+				"name": "constant.numeric.hexadecimal.icf",
+				"match": "\\b(0[xX][a-fA-F0-9]+(K|M|G|T|P)?)\\b"
+			}, {
+				"name": "constant.numeric.icf",
+				"match": "\\b([0-9]+(K|M|G|T|P)?)\\b"
+			}, {
+				"name": "variable.parameter.icf",
+				"match": "\\b(alignment|size)\\b"
+			}, {
+				"name": "punctuation.icf",
+				"match": ";|,|\\=|\\:|{|}|\\[|\\]|\\-|\\&|\\||\\(|\\)"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.icf",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.icf",
+					"match": "\\\\."
+				}
+			]
+		}
+	}
+}

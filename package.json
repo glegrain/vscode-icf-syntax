@@ -1,0 +1,30 @@
+{
+    "name": "vscode-icf-syntax",
+    "displayName": "IAR linker Configuration File Syntax",
+    "description": "IAR ILINK linker Configuration File Syntax Extension",
+    "version": "0.0.1",
+    "publisher": "GuillaumeLegrain",
+    "engines": {
+        "vscode": "^1.40.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "icf",
+            "aliases": ["IAR Linker Configuration File", "icf"],
+            "extensions": [".icf"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "icf",
+            "scopeName": "source.icf",
+            "path": "./syntaxes/icf.tmLanguage.json"
+        }]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/glegrain/vscode-icf-syntax.git"
+    }
+}
