@@ -50,7 +50,7 @@
 			"patterns": [
 			{
 				"name": "storage.modifier.icf",
-				"match": "\\b(readonly|ro|readwrite|rw|zeroinit|zi)\\b"
+				"match": "\\b((readonly|ro|readwrite|rw)(\\s+code|\\s+data)?|zeroinit|zi)\\b"
 			}, {
 				"name": "support.type.icf",
 				"match": "\\b(symbol|memory|region|block|section|object|address)\\b"

@@ -2,7 +2,7 @@
     "name": "vscode-icf-syntax",
     "displayName": "IAR linker Configuration File Syntax",
     "description": "IAR ILINK linker Configuration File Syntax Extension",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "GuillaumeLegrain",
     "engines": {
         "vscode": "^1.40.0"

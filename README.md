@@ -21,6 +21,10 @@ This extension will colorsize your linker files as shown in the following screen
 
 Users appreciate release notes as you update your extension.
 
+### 0.0.2
+
+Improved section-attribute support.
+
 ### 0.0.1
 
 Initial release.
